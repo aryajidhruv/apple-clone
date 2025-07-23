@@ -1,153 +1,147 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.container{
-    height: 200vh;
-    width: 100vw;
+  }
+  
+  .container {
+    height: auto;
+    width: 100%;
     background-color: #F5F5F7;
-
-    
-}
-
-.headcontainer{
-    width: 100vw;
-    
+  }
+  
+  .headcontainer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px; /* Reduce space below the header */
+    margin-bottom: 5px;
     padding-bottom: 5px;
+  }
   
-    
-   
-
-}
-
-a{
+  a {
     text-decoration: none;
-    /* for changing the font color */
-    color:rgb(60, 58, 58);
-}
-.mainlist{
+    color: rgb(60, 58, 58);
+  }
+  
+  .mainlist {
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 4px;
-   
-    
-}
-.list2{
+    margin: 4px 20px 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  .list2 {
     display: flex;
-    gap: 50px;
+    gap: 3rem;
     font-size: 1.5rem;
-    
-}
-.mainlist img{
-    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .mainlist img {
     height: 45px;
-   
-   
-    
-}
-.list2 img {
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
-}
-.contentbox{
+  }
+  
+  .list2 img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contentbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10%;
     width: 100%;
-   
-}
-.contentbox video {
-
+  }
+  
+  .contentbox video {
     width: 85%;
     border-radius: 50px;
-}
-main{
+  }
+  
+  main {
     margin: 0;
     padding: 0;
-}
-.h1{
+  }
+  
+  .h1 {
     display: flex;
     flex-direction: row;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    gap: 30%;
-    color:rgb(60, 58, 58) ;
-    font-size: 4rem; 
-    
-}
-.p1{
-    font-size: 10rem;
-}
-.v1{
-    
+    flex-wrap: wrap;
+    margin: 10% 0;
+    gap: 5%;
+    color: rgb(60, 58, 58);
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .p1 {
+    font-size: 6rem;
+  }
+  
+  .v1 {
     box-shadow: 6px solid 5px green;
-    
-}
-.p2{
+  }
+  
+  .p2 {
     display: flex;
     flex-direction: row;
-    gap: 50%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 50px;
-    font-size: 4rem;
-    color:rgb(60, 58, 58) ;
-}
-.iphone{
+    flex-wrap: wrap;
+    gap: 10%;
+    margin: 50px 10%;
+    font-size: 3rem;
+    color: rgb(60, 58, 58);
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .iphone {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
     gap: 20px;
     background-color: #efefef;
-    
-   
-    
-}
-.iphone img{
-    width: 200px;
-   
-   
-   
-   
-    gap: 10px;
-    flex-direction: row;
-   
-    border-radius: 50px;
-
-    
-}
-.iphone :hover{
-    transform: scale(1.4);
-    transition: all 2s ease 0.6s ;
-}
-.iphone2{
-    margin-top: 200px;
+    flex-wrap: wrap;
+  }
+  
+  .iphone img {
+    width: 150px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .iphone img:hover {
+    transform: scale(1.1);
+  }
+  
+  .iphone2 {
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10%;
+    gap: 5%;
     align-items: center;
     flex-wrap: wrap;
-
-
-}
-.leftbox{
-  font-size: 2rem;
-}
-
-.rightbox .overlay {
+  }
+  
+  .leftbox {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .rightbox {
+    position: relative;
+    width: 220px;
+  }
+  
+  .rightbox .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,23 +154,85 @@ main{
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-}
-.rightbox:hover .overlay{
+  }
+  
+  .rightbox:hover .overlay {
     opacity: 0.8;
-}
-.rightbox .overlay span{
-    color: white;
+  }
+  
+  .rightbox .overlay span {
+    color: rgb(31, 3, 3);
     font-size: 1.2rem;
     font-weight: bold;
-
-}
-.rightbox {
-    position: relative; /* This is necessary for the overlay to work */
-    width: 220px; /* Adjust the size */
-}
-
-.rightbox .overlay span {
-    color: rgb(31, 3, 3); /* Default color for all spans */
-    font-size: 1.2rem;
-    font-weight: bold;
-}
+  }
+  
+  /* ===================== */
+  /* 🔁 MEDIA QUERIES HERE */
+  /* ===================== */
+  
+  @media (max-width: 1024px) {
+    .p1 {
+      font-size: 5rem;
+    }
+  
+    .p2, .h1 {
+      font-size: 2.5rem;
+    }
+  
+    .leftbox {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .list2 {
+      gap: 1.5rem;
+      font-size: 1.2rem;
+      justify-content: center;
+    }
+  
+    .mainlist {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .h1, .p2 {
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 2rem;
+    }
+  
+    .p1 {
+      font-size: 4rem;
+    }
+  
+    .iphone img {
+      width: 120px;
+    }
+  
+    .leftbox {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list2 {
+      font-size: 1rem;
+      gap: 1rem;
+    }
+  
+    .h1, .p2 {
+      font-size: 1.5rem;
+    }
+  
+    .p1 {
+      font-size: 3rem;
+    }
+  
+    .iphone img {
+      width: 100px;
+    }
+  
+    .leftbox {
+      font-size: 1rem;
+    }
